@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "1c448c29-d495-4a7e-b262-2d5ad881d454",
+		"name": "Pruebas conduit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43605421"
+	},
+	"item": [
+		{
+			"name": "Get articles",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMzM3MH0sImlhdCI6MTc0NTMyMjI3NywiZXhwIjoxNzUwNTA2Mjc3fQ.aPWxWSSO4k_xNeJGaoby4NV-LdVGNNNWkk2ihUvf0Lc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://conduit-api.bondaracademy.com/api/articles",
+					"protocol": "https",
+					"host": [
+						"conduit-api",
+						"bondaracademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nuevo artículo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMzM3MH0sImlhdCI6MTc0NTMyMjI3NywiZXhwIjoxNzUwNTA2Mjc3fQ.aPWxWSSO4k_xNeJGaoby4NV-LdVGNNNWkk2ihUvf0Lc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Título\": \"Artículo\",\r\n    \"Descripción\": \"Esto es un articulo de conduit.\",\r\n    \"Cuerpo\": \"Aquí puedes incluir el contenido principal del documento.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://conduit.bondaracademy.com/api/editor",
+					"protocol": "https",
+					"host": [
+						"conduit",
+						"bondaracademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"editor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar artículo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMzM3MH0sImlhdCI6MTc0NTMyMjI3NywiZXhwIjoxNzUwNTA2Mjc3fQ.aPWxWSSO4k_xNeJGaoby4NV-LdVGNNNWkk2ihUvf0Lc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://conduit-api.bondaracademy.com/api/articles/Articulo-1-23370",
+					"protocol": "https",
+					"host": [
+						"conduit-api",
+						"bondaracademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles",
+						"Articulo-1-23370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar articulo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMzM3MH0sImlhdCI6MTc0NTMyMjI3NywiZXhwIjoxNzUwNTA2Mjc3fQ.aPWxWSSO4k_xNeJGaoby4NV-LdVGNNNWkk2ihUvf0Lc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"article\": {\r\n        \"slug\": \"Articulo-1-23370\",\r\n        \"title\": \"Artículo 1\",\r\n        \"description\": \"Esto es un articulo de conduit en el que vamos a aprender a usar postman.\",\r\n        \"body\": \"Punto uno de postman.\",\r\n        \"tagList\": [],\r\n        \"createdAt\": \"2025-04-22T13:08:50.109Z\",\r\n        \"updatedAt\": \"2025-04-22T13:08:50.109Z\",\r\n        \"favorited\": false,\r\n        \"favoritesCount\": 0,\r\n        \"author\": {\r\n            \"username\": \"coosta7\",\r\n            \"bio\": null,\r\n            \"image\": \"https://conduit-api.bondaracademy.com/images/smiley-cyrus.jpeg\",\r\n            \"following\": false\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://conduit-api.bondaracademy.com/api/articles/Articulo-1-23370",
+					"protocol": "https",
+					"host": [
+						"conduit-api",
+						"bondaracademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles",
+						"Articulo-1-23370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar artículo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMzM3MH0sImlhdCI6MTc0NTMyMjI3NywiZXhwIjoxNzUwNTA2Mjc3fQ.aPWxWSSO4k_xNeJGaoby4NV-LdVGNNNWkk2ihUvf0Lc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://conduit-api.bondaracademy.com/api/articles/Articulo-1-23370",
+					"protocol": "https",
+					"host": [
+						"conduit-api",
+						"bondaracademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles",
+						"Articulo-1-23370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get con {“slugID”: xxx, “titulo”: xxx}",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json();\r",
+							"\r",
+							"let output = {\r",
+							"    slug: response.slug,\r",
+							"    titulo: response.titulo\r",
+							"};\r",
+							"\r",
+							"console.log(output);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMzM3MH0sImlhdCI6MTc0NTMyMjI3NywiZXhwIjoxNzUwNTA2Mjc3fQ.aPWxWSSO4k_xNeJGaoby4NV-LdVGNNNWkk2ihUvf0Lc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://conduit-api.bondaracademy.com/api/articles",
+					"protocol": "https",
+					"host": [
+						"conduit-api",
+						"bondaracademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
